@@ -10,6 +10,9 @@
 <input id=res placeholder="result">
 
 <button id=btn>set value 月水金</button>
+
+<div id=test2></div>
+
 </section>
 
 <footer>
@@ -22,6 +25,13 @@ inp1.onchange = () => {
   res.value = inp1.value;
 };
 btn.onclick = () => inp1.value = "月水金";
+</script>
+
+<script type="module">
+import { InputWeek } from "./input-week.js";
+
+const inp2 = new InputWeek({ value: "土日" });
+test2.appendChild(inp2);
 </script>
   
 <style>

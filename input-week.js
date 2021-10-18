@@ -13,6 +13,9 @@ class InputWeek extends HTMLElement {
       const span = create("span", lbl);
       span.textContent = c;
     }
+    if (opts?.value) {
+      this.value = opts.value;
+    }
   }
   set value(v) {
     this.querySelectorAll("input").forEach((inp, idx) => {
