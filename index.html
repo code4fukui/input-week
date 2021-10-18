@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>input-week tag demo</title>
+<script type="module" src="./input-week.js"></script>
+</head><body>
+
+<section>
+<h1>input-week tag demo</h1>
+<input-week id=inp1></input-week>
+
+<input id=res placeholder="result">
+
+<button id=btn>set value 月水金</button>
+</section>
+
+<footer>
+  <hr>
+  <a href=https://fukuno.jig.jp/3372>by @taisukef</a>, <a href=https://github.com/code4fukui/input-week/>src on GitHub</a>
+</footer>
+
+<script type="module">
+inp1.onchange = () => {
+  res.value = inp1.value;
+};
+btn.onclick = () => inp1.value = "月水金";
+</script>
+  
+<style>
+section {
+  margin: 1em 3em;
+  white-space: pre-wrap;
+}
+footer {
+  margin: 3em;
+}
+</style>
+
+</body></html>
